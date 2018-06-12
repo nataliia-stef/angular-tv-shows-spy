@@ -1,0 +1,14 @@
+
+<h2>Best TV Shows</h2>
+
+<ul class='shows'>
+  <li *ngFor='let show of shows'  
+    [class.selected]="show === selectedShow"
+    (click)='onSelect(show)'>
+    <span class='badge'>{{show.id}}</span> {{show.title}}
+  </li>
+</ul>
+
+
+<app-show-detail [show]="selectedShow"></app-show-detail>
+
